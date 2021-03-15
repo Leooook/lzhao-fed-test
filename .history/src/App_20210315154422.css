@@ -19,11 +19,7 @@
 /* header */
 .header {
 	background-color: var(--nav-black);
-	height: 80px;
-	padding: 20px;
-	font-size: 2rem;
-	font-family: var(--capitial);
+	height: 8vh;
 	text-align: center;
 	color: var(--white);
-	letter-spacing: 1px;
 }

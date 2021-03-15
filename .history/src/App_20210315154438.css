@@ -19,11 +19,9 @@
 /* header */
 .header {
 	background-color: var(--nav-black);
-	height: 80px;
-	padding: 20px;
+	height: 8vh;
 	font-size: 2rem;
-	font-family: var(--capitial);
+  font-family: ;
 	text-align: center;
 	color: var(--white);
-	letter-spacing: 1px;
 }
