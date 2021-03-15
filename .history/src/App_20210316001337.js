@@ -1,0 +1,44 @@
+import React, { useState } from 'react'
+import { BsCaretDownFill } from 'react-icons/bs'
+
+import './App.css'
+import Header from './components/header.jsx'
+import Feature from './components/feature.jsx'
+
+export default function App() {
+	const [ featureAmount, setFeatureAmount ] = useState([ 1 ])
+	const [ iconsDisplay, setIconsDisplay ] = useState(false)
+
+	
+
+	return (
+		
+	)
+}
+
+import React, { Component } from 'react';
+
+class App extends Component {
+  state = {
+    featureAmount: [0],
+    iconsDisplay: false
+  }
+
+  setFeature = () => {
+		this.setState({featureAmount: [...this.state.featureAmount, this.state.featureAmount[this.state.featureAmount.length - 1] + 1]})
+	}
+
+	setIcons = () => {
+		this.setState(!this.state.iconsDisplay)
+	}
+
+  render() {
+    return (
+      <div>
+        
+      </div>
+    );
+  }
+}
+
+export default App;
