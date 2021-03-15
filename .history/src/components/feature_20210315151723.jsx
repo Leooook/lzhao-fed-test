@@ -2,19 +2,23 @@ import React, { Component } from 'react'
 
 class Feature extends Component {
 	state = {
-		dataSet: [],
-		dataAmount: 6
+    dataSet = [],
+    dataAmount = 5,
+		header: new Headers({
+			'Access-Control-Allow-Origin': '*',
+			'Content-Type': 'text/plain'
+		})
 	}
 
 	fetchData = () => {
 		fetch('https://randomuser.me/api/', {
-			method: 'GET'
+			method: 'GET',
+			headers: this.state.header,
+			mode: 'cors'
 		})
 			.then((response) => response.json())
 			.then((data) => {
-				let dataSet = this.state.dataSet
-				dataSet.push(data.results[0])
-				this.setState({ dataSet })
+				console.log(data.results[0])
 			})
 			.catch((error) => {
 				console.error('Error:', error)
@@ -22,9 +26,11 @@ class Feature extends Component {
 	}
 
 	componentDidMount() {
-		for (let i = 0; i < this.state.dataAmount; i++) {
-			this.fetchData()
-		}
+    for (i = 0; i< this.state.dataAmount; i++) {
+      const dataSet = this.dataSet.push
+      this.setState()
+
+    } 
 	}
 
 	render() {

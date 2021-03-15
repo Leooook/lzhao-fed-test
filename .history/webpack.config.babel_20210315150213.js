@@ -48,7 +48,7 @@ const js = {
 
 const css = {
   test: /\.css$/,
-  use: ['style-loader', 'css-loader']
+  use: [ 'style-loader', 'css-loader' ]
 };
 
 const svg = {
@@ -152,7 +152,7 @@ const defaultConfig = {
 		}
 	},
 	module: {
-		rules: [js, css, svg, images]
+		rules: [js, svg, images]
 	},
 	optimization: {
 		splitChunks: {

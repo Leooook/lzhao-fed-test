@@ -3,12 +3,18 @@ import React, { Component } from 'react'
 class Feature extends Component {
 	state = {
 		dataSet: [],
-		dataAmount: 6
+		dataAmount: 5,
+		header: new Headers({
+			'Access-Control-Allow-Origin': '*',
+			'Content-Type': 'text/plain'
+		})
 	}
 
 	fetchData = () => {
 		fetch('https://randomuser.me/api/', {
-			method: 'GET'
+			method: 'GET',
+			headers: this.state.header,
+			mode: 'cors'
 		})
 			.then((response) => response.json())
 			.then((data) => {

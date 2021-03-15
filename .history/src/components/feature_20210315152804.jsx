@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 class Feature extends Component {
 	state = {
 		dataSet: [],
-		dataAmount: 6
+		dataAmount: 10
 	}
 
 	fetchData = () => {
@@ -25,6 +25,7 @@ class Feature extends Component {
 		for (let i = 0; i < this.state.dataAmount; i++) {
 			this.fetchData()
 		}
+		console.log(this.state.dataSet)
 	}
 
 	render() {

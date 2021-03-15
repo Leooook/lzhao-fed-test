@@ -25,6 +25,7 @@ class Feature extends Component {
 		for (let i = 0; i < this.state.dataAmount; i++) {
 			this.fetchData()
 		}
+		console.log(this.state.dataSet)
 	}
 
 	render() {
