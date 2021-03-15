@@ -1,0 +1,17 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+:root {
+	--nav-black: rgba(14, 14, 14, 0.897);
+	--white: rgb(255, 255, 255);
+	--grey: rgb(189, 189, 189);
+	--light-grey: rgb(209, 209, 209);
+	--capitial: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.app {
+	width: 100vw;
+	min-height: 100vh;
+}
+/* header */
