@@ -1,0 +1,52 @@
+
+.detail-info {
+	margin-bottom: 10px;
+}
+.detail-name {
+	font-family: 'Playfair Display', serif;
+	font-weight: bold;
+	font-size: 1.3rem;
+}
+.detail-name2 {
+	font-weight: 100;
+	font-size: 0.9rem;
+	color: rgb(82, 82, 82);
+	font-style: oblique;
+}
+.detail-sex-date {
+	display: flex;
+}
+.detail-date {
+	margin-right: 13px;
+}
+.detail-font {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 0.8rem;
+}
+@media screen and (max-width: 500px) {
+	.detail {
+		margin-bottom: 30px;
+		width: 90vw;
+		height: 50vw;
+	}
+	.detail-pic {
+		height: 100px;
+		width: 100px;
+	}
+	.detail-info {
+		margin-bottom: 6px;
+	}
+	.detail-name {
+		font-size: 1rem;
+	}
+	.detail-name2 {
+		font-size: 0.8rem;
+	}
+	.detail-date {
+		margin-right: 8px;
+	}
+	.detail-font {
+		font-size: 0.75rem;
+	}
+}
+/* end of detail */
