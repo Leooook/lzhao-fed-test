@@ -9,9 +9,14 @@ class Feature extends Component {
 		dataAmount: 6
 	}
 
+	// fetch data from url
 	fetchData = () => {
 		fetch('https://randomuser.me/api/', {
-			method: 'GET'
+			method: 'GET',
+			mode: 'cors',
+			header: new Headers({
+				'Access-Control-Allow-Origin': '*'
+			})
 		})
 			.then((response) => response.json())
 			.then((data) => {
@@ -19,6 +24,7 @@ class Feature extends Component {
 				dataSet.push(data.results[0])
 				this.setState({ dataSet })
 
+				// after fetched data, show 'add more button'
 				if (
 					this.state.dataSet.length !== 0 &&
 					this.state.dataSet.length % 6 === 0 &&
@@ -34,6 +40,7 @@ class Feature extends Component {
 	}
 
 	componentDidMount() {
+		// Fetch 6 datas each time
 		for (let i = 0; i < this.state.dataAmount; i++) {
 			this.fetchData()
 		}

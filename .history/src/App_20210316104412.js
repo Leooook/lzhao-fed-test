@@ -35,7 +35,7 @@ class App extends Component {
 				<Header />
 				{featureAmount.map((key) => (
 					<Feature
-						key={key}
+						key={key.id}
 						newOne={key === featureAmount.length}
 						setIcons={this.setIcons}
 						iconsDisplay={iconsDisplay}

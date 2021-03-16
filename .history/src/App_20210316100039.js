@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import React, { Component } from 'react'
 import { BsCaretDownFill } from 'react-icons/bs'
 
@@ -7,41 +6,39 @@ import Header from './components/header'
 import Feature from './components/feature'
 
 class App extends Component {
-	constructor(props) {
-		super(props)
-		this.state = {
-			featureAmount: [ 1 ],
-			iconsDisplay: false
-		}
+	state = {
+		featureAmount: [ 1 ],
+		iconsDisplay: false
 	}
 
 	// Triger for adding more features
 	setFeature = () => {
-		const { featureAmount } = this.state
-		this.setState({ featureAmount: [ ...featureAmount, featureAmount[featureAmount.length - 1] + 1 ] })
+		const featureAmount = [
+			...this.state.featureAmount,
+			this.state.featureAmount[this.state.featureAmount.length - 1] + 1
+		]
+		this.setState({ featureAmount })
 	}
 
 	// Triger for show & hide 'add more' button
 	setIcons = () => {
-		const { iconsDisplay } = this.state
-		this.setState({ iconsDisplay: !iconsDisplay })
+		const iconsDisplay = !this.state.iconsDisplay
+		this.setState({ iconsDisplay })
 	}
 
 	render() {
-		const { featureAmount, iconsDisplay } = this.state
-
 		return (
 			<div className="app">
 				<Header />
-				{featureAmount.map((key) => (
+				{this.state.featureAmount.map((key) => (
 					<Feature
 						key={key}
-						newOne={key === featureAmount.length}
+						newOne={key === this.state.featureAmount.length}
 						setIcons={this.setIcons}
-						iconsDisplay={iconsDisplay}
+						iconsDisplay={this.state.iconsDisplay}
 					/>
 				))}
-				{iconsDisplay ? (
+				{this.state.iconsDisplay ? (
 					<BsCaretDownFill
 						className="add-feature"
 						onClick={() => {

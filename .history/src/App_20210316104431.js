@@ -19,6 +19,7 @@ class App extends Component {
 	setFeature = () => {
 		const { featureAmount } = this.state
 		this.setState({ featureAmount: [ ...featureAmount, featureAmount[featureAmount.length - 1] + 1 ] })
+    console.log(this.state.featureAmount)
 	}
 
 	// Triger for show & hide 'add more' button

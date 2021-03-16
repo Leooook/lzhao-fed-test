@@ -10,7 +10,7 @@ class App extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			featureAmount: [ 1 ],
+			featureAmount: [ 0 ],
 			iconsDisplay: false
 		}
 	}
@@ -33,10 +33,10 @@ class App extends Component {
 		return (
 			<div className="app">
 				<Header />
-				{featureAmount.map((key) => (
+				{featureAmount.map((each => (
 					<Feature
-						key={key}
-						newOne={key === featureAmount.length}
+						key={each.id}
+						newOne={key.id === featureAmount.length - 1}
 						setIcons={this.setIcons}
 						iconsDisplay={iconsDisplay}
 					/>
